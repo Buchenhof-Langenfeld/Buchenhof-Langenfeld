@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buchenhof Langenfeld – Rinderzucht · Pferdezucht · Direktvermarktung</title>
+<meta name="description" content="Familienbetrieb in Langenfeld bei Hessisch Oldendorf im Weserbergland: Rinderzucht, Pferdezucht und Direktvermarktung ab Hof.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F2;--bg2:#F1EBE0;--green:#24402F;--green2:#1a3023;--brown:#7D5330;--gold:#D4A373;--text:#2b2a26;--muted:#6b665c;--line:#e3dbcd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:1.0625rem}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.1;color:var(--green)}
+h2{font-size:clamp(2.1rem,4.5vw,3.3rem);margin-bottom:1.2rem}
+h3{font-size:1.65rem;margin-bottom:.5rem}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+section{padding:clamp(4.5rem,9vw,7.5rem) 0}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brown);font-weight:600;margin-bottom:1rem}
+.lead{color:var(--muted);max-width:38rem}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s;border:1.5px solid transparent}
+.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--brown)}
+.btn-gold{background:var(--gold);color:var(--green2)}.btn-gold:hover{background:#e0b689}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-outline{border-color:var(--green);color:var(--green)}.btn-outline:hover{background:var(--green);color:#fff}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.3s}
+header.scrolled{background:rgba(250,247,242,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff}
+header.scrolled .brand,header.scrolled .menu a{color:var(--green)}
+.brand img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 28%;background:#fff}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:1.4rem;display:block;line-height:1}
+.brand small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.menu{display:flex;align-items:center;gap:1.8rem;list-style:none}
+.menu a{text-decoration:none;color:#fff;font-size:.93rem;font-weight:500}
+.menu a:not(.btn):hover{color:var(--gold)}
+.burger{display:none;background:none;border:0;color:#fff;cursor:pointer}
+header.scrolled .burger{color:var(--green)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:0 0 clamp(4rem,10vh,7rem);background:url(img/stute-raps.jpg) center 40%/cover;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,24,.55) 0%,rgba(20,32,24,.15) 35%,rgba(20,32,24,.8) 100%)}
+.hero .wrap{position:relative;width:100%}
+.hero .eyebrow{color:#fff;background:rgba(20,32,24,.7);padding:.45rem .9rem;border-radius:999px;border:1px solid rgba(212,163,115,.6)}
+.hero h1{color:#fff;font-size:clamp(2.6rem,6.5vw,5.2rem);max-width:15ch;margin-bottom:1.3rem}
+.hero p{max-width:36rem;font-size:1.12rem;opacity:.93;margin-bottom:2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+/* about */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:6px;aspect-ratio:4/3.4;object-fit:cover;width:100%}
+.badge{position:absolute;right:-1.2rem;bottom:-1.8rem;background:var(--green);color:#fff;padding:1.4rem 1.6rem;max-width:260px;border-radius:6px;box-shadow:0 18px 40px -18px rgba(0,0,0,.4)}
+.badge b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;display:block;color:var(--gold);line-height:1.1;margin-bottom:.3rem}
+.badge span{font-size:.92rem;opacity:.9}
+.about p+p{margin-top:1rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem;border-top:1px solid var(--line);padding-top:1.6rem}
+.stats b{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--brown);display:block;line-height:1}
+.stats span{font-size:.85rem;color:var(--muted)}
+/* tiere */
+.bg2{background:var(--bg2)}
+.head{max-width:44rem;margin-bottom:3rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.card{background:var(--bg);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.card img{aspect-ratio:4/4.3;object-fit:cover;width:100%;transition:transform .6s}
+.card:hover img{transform:scale(1.04)}
+.card figure{overflow:hidden}
+.card div{padding:1.5rem 1.6rem 1.8rem}
+.card p{color:var(--muted);font-size:.97rem}
+/* produkte */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:2.5rem 0}
+.prod{border:1px solid var(--line);border-radius:6px;padding:2rem 1.7rem;background:#fff;position:relative}
+.prod svg{width:40px;height:40px;color:var(--brown);margin-bottom:1rem}
+.tag{position:absolute;top:1.6rem;right:1.4rem;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg2);color:var(--brown);padding:.3rem .7rem;border-radius:999px;font-weight:600}
+.prod p{color:var(--muted);font-size:.96rem}
+.note{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem;background:var(--green);color:#fff;border-radius:6px;padding:1.6rem 2rem}
+.note p{max-width:36rem}.note b{color:var(--gold)}
+/* galerie */
+.gallery{columns:3 260px;column-gap:1rem}
+.gallery figure{break-inside:avoid;margin-bottom:1rem;border-radius:6px;overflow:hidden;position:relative;cursor:zoom-in}
+.gallery img{width:100%;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem 1rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:.88rem}
+.lb{position:fixed;inset:0;background:rgba(15,22,17,.92);display:none;align-items:center;justify-content:center;z-index:99;padding:2rem;cursor:zoom-out}
+.lb.open{display:flex}.lb img{max-height:90vh;border-radius:4px}
+/* kontakt */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:stretch}
+.items{display:grid;gap:1rem;margin-top:2rem}
+.item{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.2rem;background:#fff;border:1px solid var(--line);border-radius:6px;text-decoration:none}
+a.item:hover{border-color:var(--gold)}
+.item svg{flex:none;width:42px;height:42px;padding:10px;border-radius:50%;background:var(--bg2);color:var(--green)}
+.item small{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--brown);font-weight:600}
+.quote{position:relative;border-radius:6px;overflow:hidden;min-height:480px;background:url(img/hof.jpg) center/cover;display:flex;align-items:flex-end}
+.quote::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(20,32,24,.88))}
+.quote blockquote{position:relative;color:#fff;padding:2.2rem}
+.quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.75rem;line-height:1.25}
+.quote cite{display:block;margin-top:.8rem;font-style:normal;color:var(--gold);font-size:.9rem}
+.map{margin-top:1rem;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:220px;border:0;display:block}
+/* footer */
+footer{background:var(--green2);color:rgba(255,255,255,.75);padding:3.5rem 0 2rem;font-size:.92rem}
+.foot{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:2rem;margin-bottom:1.5rem}
+.foot .brand{color:#fff}.foot .brand img{width:60px;height:60px}
+.foot nav{display:flex;gap:1.4rem;flex-wrap:wrap}.foot nav a{text-decoration:none}.foot nav a:hover{color:var(--gold)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){
+ .menu{position:fixed;inset:76px 0 auto;background:var(--bg);flex-direction:column;padding:1.5rem;gap:1.2rem;display:none;box-shadow:0 10px 20px rgba(0,0,0,.08)}
+ .menu.open{display:flex}.menu a{color:var(--green)!important}.menu .btn{color:#fff!important}
+ .burger{display:block}
+ .about,.contact{grid-template-columns:1fr}
+ .cards,.prod-grid{grid-template-columns:1fr}
+ .badge{right:.8rem;bottom:-1.5rem}
+ .about-img{margin-bottom:1.5rem}
+ .quote{min-height:360px}
+}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header id="top">
+ <div class="wrap nav">
+  <a href="#" class="brand"><img src="img/logo.jpg" alt="Buchenhof Logo"><span><b>Buchenhof</b><small>Langenfeld</small></span></a>
+  <button class="burger" aria-label="Menü öffnen" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h20M4 14h20M4 20h20"/></svg></button>
+  <ul class="menu">
+   <li><a href="#hof">Unser Hof</a></li><li><a href="#tiere">Unsere Tiere</a></li><li><a href="#produkte">Produkte</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#kontakt">Kontakt</a></li>
+   <li><a href="#kontakt" class="btn btn-gold">Hof besuchen</a></li>
+  </ul>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <span class="eyebrow">Familienbetrieb seit Generationen</span>
+  <h1>Wo Tiere zuhause sind und Tradition lebendig bleibt.</h1>
+  <p>Willkommen auf dem Buchenhof in Langenfeld bei Hessisch Oldendorf – unserem Familienbetrieb für Pferdezucht, Rinderzucht und Direktvermarktung mitten im Weserbergland.</p>
+  <div class="btns"><a href="#hof" class="btn btn-gold">Mehr erfahren</a><a href="#tiere" class="btn btn-ghost">Unsere Tiere</a></div>
+ </div>
+</section>
+
+<section id="hof">
+ <div class="wrap about">
+  <div class="about-img reveal">
+   <img src="img/hof.jpg" alt="Hofgebäude des Buchenhofs mit Stute und Fohlen auf der Weide">
+   <div class="badge"><b>Mit Herz gemacht</b><span>Jedes Tier kennt hier seinen Namen.</span></div>
+  </div>
+  <div class="reveal">
+   <span class="eyebrow">Unser Hof</span>
+   <h2>Ein Stück Heimat im Weserbergland.</h2>
+   <p class="lead">Zwischen Feldern und Wald liegt unser Buchenhof in Langenfeld. Hier leben wir als Familie mit unseren Tieren – und mit der Überzeugung, dass gute Landwirtschaft Zeit, Ruhe und Respekt braucht.</p>
+   <p class="lead">Statt Masse setzen wir auf Handwerk: Unsere Pferde und Rinder wachsen auf den Weiden rund um den Hof auf, und was wir erzeugen, geben wir ohne Umwege direkt an Sie weiter. Kurze Wege, ehrliche Arbeit und viel Liebe zum Beruf.</p>
+   <div class="stats"><div><b>3</b><span>Standbeine</span></div><div><b>6</b><span>Tierarten</span></div><div><b>100%</b><span>Familienhand</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="tiere" class="bg2">
+ <div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Unsere Tiere</span><h2>Pferde, Rinder und alles, was zum Hof gehört.</h2><p class="lead">Ob Stute, Kalb oder Hofhund – bei uns hat jedes Tier seinen Platz, viel Auslauf und eine enge Bindung zur Familie.</p></div>
+  <div class="cards">
+   <article class="card reveal"><figure><img src="img/stute-raps.jpg" alt="Stute mit Fohlen vor einem Rapsfeld" loading="lazy"></figure><div><h3>Pferde</h3><p>Stuten, Fohlen und Wallache wachsen bei uns in Ruhe auf – mit viel Weidegang, Herdenleben und täglichem Kontakt zur Familie.</p></div></article>
+   <article class="card reveal"><figure><img src="img/rind.jpg" alt="Portrait eines Weiderinds" loading="lazy"></figure><div><h3>Rinder</h3><p>Unsere Mutterkühe und Kälber verbringen die warme Jahreszeit auf den Weiden rund um den Hof – kleinschalig, ohne Hektik und artgerecht.</p></div></article>
+   <article class="card reveal"><figure><img src="img/schnee.jpg" alt="Kalb mit Halfter im Schnee, dahinter der Hofhund" loading="lazy"></figure><div><h3>Hühner, Schafe &amp; Hofhunde</h3><p>Freilaufende Hühner, unsere Schafe, treue Hofhunde und neugierige Katzen machen das Hofleben erst komplett.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="produkte">
+ <div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Direktvermarktung</span><h2>Ehrlich vom Hof. Direkt zu Ihnen.</h2><p class="lead">Ohne Zwischenhändler, ohne lange Transportwege: Sie wissen genau, woher Ihre Lebensmittel kommen – und können die Tiere sogar auf der Weide sehen.</p></div>
+  <div class="prod-grid">
+   <div class="prod reveal"><span class="tag">Auf Anfrage</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9c0-3 3-5 8-5s8 2 8 5v1c0 1-1 2-2 2H6c-1 0-2-1-2-2z"/><path d="M3 12h18v3a5 5 0 01-5 5H8a5 5 0 01-5-5z"/></svg><h3>Rindfleisch vom Hof</h3><p>Aus eigener Aufzucht, ehrlich gereift und als Mischpakete erhältlich. Bitte rechtzeitig vorbestellen.</p></div>
+   <div class="prod reveal"><span class="tag">Ab Hof</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-4 0-7 6-7 11a7 7 0 0014 0c0-5-3-11-7-11z"/></svg><h3>Frische Eier</h3><p>Täglich frisch gesammelt von unseren freilaufenden Hühnern – direkt auf dem Hof erhältlich.</p></div>
+   <div class="prod reveal"><span class="tag">Saisonal</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21V8"/><path d="M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 8c0-3-2-5-5-5 0 3 2 5 5 5zM12 14c0-3 2-5 5-5 0 3-2 5-5 5zM12 14c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg><h3>Saisonale Hofprodukte</h3><p>Je nach Jahreszeit weitere Erzeugnisse vom Hof – fragen Sie gerne telefonisch nach dem aktuellen Angebot.</p></div>
+  </div>
+  <div class="note reveal"><p><b>Ab-Hof-Verkauf nach Absprache.</b> Bitte melden Sie sich vorab kurz telefonisch oder per E-Mail – dann ist sicher jemand für Sie da.</p><div class="btns"><a href="#kontakt" class="btn btn-gold">Vor Ort kaufen</a><a href="mailto:Info@buchenhof-langenfeld.com" class="btn btn-ghost">Kontakt aufnehmen</a></div></div>
+ </div>
+</section>
+
+<section id="galerie" class="bg2">
+ <div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Galerie</span><h2>Ein Blick auf das Hofleben.</h2></div>
+  <div class="gallery">
+   <figure><img src="img/fohlen.jpg" alt="Fohlen bei seiner Mutter" loading="lazy"><figcaption>Fohlen bei der Mutter</figcaption></figure>
+   <figure><img src="img/hof.jpg" alt="Hof mit Stute und Fohlen" loading="lazy"><figcaption>Der Buchenhof</figcaption></figure>
+   <figure><img src="img/frauke.jpg" alt="Kalb Frauke auf der Blumenwiese" loading="lazy"><figcaption>Kalb Frauke auf der Blumenwiese</figcaption></figure>
+   <figure><img src="img/mutterkuh.jpg" alt="Mutterkuh mit Kalb" loading="lazy"><figcaption>Mutterkuh mit Kalb</figcaption></figure>
+   <figure><img src="img/schnee.jpg" alt="Kalb mit Halfter im Schnee" loading="lazy"><figcaption>Im Winter mit Halfter und Hofhund</figcaption></figure>
+   <figure><img src="img/stute-raps.jpg" alt="Stute und Fohlen am Rapsfeld" loading="lazy"><figcaption>Stute und Fohlen am Raps</figcaption></figure>
+   <figure><img src="img/weide.jpg" alt="Rind an der Weide" loading="lazy"><figcaption>Auf der Weide</figcaption></figure>
+   <figure><img src="img/rind.jpg" alt="Rind im Löwenzahn" loading="lazy"><figcaption>Neugierige Besucherin</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="kontakt">
+ <div class="wrap contact">
+  <div class="reveal">
+   <span class="eyebrow">Kontakt &amp; Ab-Hof-Verkauf</span>
+   <h2>Schauen Sie gerne vorbei.</h2>
+   <p class="lead">Sie möchten Fleisch bestellen, Eier abholen oder sich einfach den Hof anschauen? Rufen Sie uns an oder schreiben Sie uns.</p>
+   <div class="items">
+    <a class="item" href="https://www.google.com/maps/search/?api=1&query=Riesenbergstra%C3%9Fe+6+31840+Hessisch+Oldendorf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Adresse</small>Riesenbergstraße 6, 31840 Langenfeld, Hessisch-Oldendorf</div></a>
+    <a class="item" href="tel:+4917674583014"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><div><small>Telefon</small>+49 176 74583014</div></a>
+    <a class="item" href="mailto:Info@buchenhof-langenfeld.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small>E-Mail</small>Info@buchenhof-langenfeld.com</div></a>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small>Öffnungszeiten</small>Ab-Hof-Verkauf nach Absprache – bitte vorab kurz melden</div></div>
+   </div>
+  </div>
+  <div class="reveal" style="display:flex;flex-direction:column">
+   <div class="quote" style="flex:1"><blockquote><p>„Kommen Sie vorbei, lernen Sie uns und unsere Tiere kennen – Sie sind herzlich willkommen.“</p><cite>— Familie Buchenhof</cite></blockquote></div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <a href="#" class="brand"><img src="img/logo.jpg" alt=""><span><b>Buchenhof Langenfeld</b><small>Rinderzucht · Pferdezucht · Direktvermarktung</small></span></a>
+   <nav><a href="#hof">Unser Hof</a><a href="#tiere">Unsere Tiere</a><a href="#produkte">Produkte</a><a href="#galerie">Galerie</a><a href="#kontakt">Kontakt</a></nav>
+  </div>
+  <p>Familienbetrieb in Langenfeld · Hessisch Oldendorf · Weserbergland, Niedersachsen</p>
+  <p style="margin-top:.4rem;opacity:.7">© <span id="y">2026</span> Buchenhof Langenfeld. Alle Rechte vorbehalten.</p>
+ </div>
+</footer>
+<div class="lb" onclick="this.classList.remove('open')"><img alt=""></div>
+<script>
+const h=document.querySelector('header');const f=()=>h.classList.toggle('scrolled',scrollY>40);addEventListener('scroll',f);f();
+document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>document.querySelector('.menu').classList.remove('open'));
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const lb=document.querySelector('.lb');document.querySelectorAll('.gallery figure').forEach(fg=>fg.onclick=()=>{lb.querySelector('img').src=fg.querySelector('img').src;lb.classList.add('open')});
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  const DEFAULT_LINE_HEIGHT = 16;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  const PICK_CAPABILITIES = ["pick"];
+  const PICK_CHAIN_LENGTH = 4;
+  const PICK_MAX_TEXT_CHARS = 120;
+  const PICK_MAX_HTML_CHARS = 300;
+
+  function truncate(value, maxChars) {
+    return value.length > maxChars ? value.slice(0, maxChars - 1) + "…" : value;
+  }
+
+  function isPickableElement(element) {
+    return (
+      element instanceof Element &&
+      element !== document.documentElement &&
+      element !== document.body
+    );
+  }
+
+  function resolvePickTarget(x, y) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+    const element = document.elementFromPoint(x, y);
+    return isPickableElement(element) ? element.closest("svg") || element : null;
+  }
+
+  function pickLabel(element) {
+    if (element.id) return element.localName + "#" + element.id;
+    return [element.localName].concat(Array.from(element.classList).slice(0, 2)).join(".");
+  }
+
+  // Only attributes that help find the element in source. data-* values and URL
+  // query strings or fragments can carry tokens.
+  const PICK_ATTRIBUTES = new Set([
+    "id",
+    "class",
+    "name",
+    "type",
+    "role",
+    "alt",
+    "aria-label",
+    "href",
+    "src",
+  ]);
+
+  function pickAttributeValue(attribute) {
+    return attribute.name === "href" || attribute.name === "src"
+      ? attribute.value.split(/[?#]/)[0]
+      : attribute.value;
+  }
+
+  function describePickElement(element) {
+    const chain = [];
+    for (
+      let current = element;
+      isPickableElement(current) && chain.length < PICK_CHAIN_LENGTH;
+      current = current.parentElement
+    ) {
+      chain.unshift(current);
+    }
+    const attributes = Array.from(element.attributes)
+      .filter((attribute) => PICK_ATTRIBUTES.has(attribute.name))
+      .map((attribute) => ` ${attribute.name}="${pickAttributeValue(attribute).replace(/"/g, "&quot;")}"`)
+      .join("");
+    const text = (element.innerText || element.textContent || "").replace(/\s+/g, " ").trim();
+    return {
+      chain: chain.map(pickLabel),
+      html: truncate(`<${element.localName}${attributes}>`, PICK_MAX_HTML_CHARS),
+      text: text ? truncate(text, PICK_MAX_TEXT_CHARS) : undefined,
+    };
+  }
+
+  // Hover asks once per frame, and innerText on a large section forces layout,
+  // so only the rect is re-read while the pointer stays on the same element.
+  // Clicks ask for fresh details since the page may have changed the element.
+  let lastPick = null;
+
+  function describePickTarget(element, fresh) {
+    if (fresh || lastPick?.element !== element) {
+      lastPick = { element, details: describePickElement(element) };
+    }
+    const rect = element.getBoundingClientRect();
+    return {
+      rect: { x: rect.left, y: rect.top, width: rect.width, height: rect.height },
+      ...lastPick.details,
+    };
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+      capabilities: PICK_CAPABILITIES,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_PICK") {
+      const element = resolvePickTarget(event.data.x, event.data.y);
+      postToTrustedTop({
+        type: "INLINE_EDIT_PICK_RESULT",
+        seq: event.data.seq,
+        target: element ? describePickTarget(element, event.data.fresh === true) : null,
+      });
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_BY") {
+      const { deltaX, deltaY, deltaMode } = event.data;
+      if (!scrollForwarding || !Number.isFinite(deltaX) || !Number.isFinite(deltaY)) return;
+      if (deltaMode !== 0 && deltaMode !== 1 && deltaMode !== 2) return;
+      const lineHeight =
+        parseFloat(getComputedStyle(document.documentElement).lineHeight) || DEFAULT_LINE_HEIGHT;
+      const scaleX = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerWidth : 1;
+      const scaleY = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerHeight : 1;
+      // The selection overlay receives the wheel event instead of this iframe.
+      // Instant scrolling preserves trackpad deltas even on smooth-scroll sites.
+      window.scrollBy({ left: deltaX * scaleX, top: deltaY * scaleY, behavior: "instant" });
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
